@@ -74,24 +74,58 @@ ul {
   height: 100%;
 }
 
-#name-input {
+input {
+  font-family: Montserrat;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #2e2f42;
-  padding: 8px 16px;
   border: 1px solid #808080;
   border-radius: 4px;
-  width: 360px;
   height: 40px;
+  padding: 8px 16px;
 }
-#name-input::placeholder {
+
+input::placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #2e2f42;
+}
+
+input:hover {
+  border: 1px solid #000;
+}
+
+input:active,
+input:focus,
+input:focus-visible {
+  border: 1px solid #808080;
+}
+
+button {
+  background: #4e75ff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: fit-content;
+  height: 40px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  font-family: Montserrat;
+}
+
+button:hover {
+  background: #6c8cff;
+}
+
+#name-input {
+  width: 360px;
 }
 
 h1:has(> span#name-output) {
@@ -124,31 +158,10 @@ h1:has(> span#name-output) {
   color: #2e2f42;
   input {
     width: 100%;
-    border: 1px solid #808080;
-    border-radius: 4px;
-    height: 40px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
-    color: #2e2f42;
   }
 }
 
 .login-form button {
-  border-radius: 8px;
-  padding: 8px 16px;
-  width: 87px;
-  height: 40px;
-  background: #4e75ff;
-  border: none;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: #fff;
-  padding: 8px 16px;
-  font-family: Montserrat;
   margin-top: 8px;
 }
 
@@ -167,16 +180,4 @@ h1:has(> span#name-output) {
 }
 
 .change-color {
-  font-family: Montserrat;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: #fff;
-  display: inline-block;
-  border-radius: 8px;
-  padding: 8px 16px;
-  height: 40px;
-  background: #4e75ff;
-  border: none;
 }
