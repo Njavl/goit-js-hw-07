@@ -1,14 +1,14 @@
-let input = document.querySelector("#name-input");
+let input = document.querySelector('#name-input');
 //console.log(input);
-let changeSpan = document.querySelector("#name-output");
+let changeSpan = document.querySelector('#name-output');
 //console.log(changeSpan);
 
 function inputName(event) {
-  const value = event.target.value;
+  const value = event.target.value.trim();
 
-  let name = value === "" ? "Anonymous" : value;
+  let name = value === '' ? 'Anonymous' : value;
 
-  changeSpan.textContent = name.trim();
+  changeSpan.textContent = name;
 }
 
-input.addEventListener("input", inputName);
+input.addEventListener('input', inputName);
