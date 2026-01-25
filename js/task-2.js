@@ -25,11 +25,10 @@ const images = [
   },
 ];
 
-let markup = [];
+const gallery = document.querySelector(".gallery");
 
-let gallery = document.querySelector(".gallery");
-markup = images.map((image) => {
-  return `<li class = "gallery-item"><img src = ${image.url} alt = ${image.alt}/></li>`;
+const markup = images.map((image) => {
+  return `<li class = "gallery-item"><img src = "${image.url}" alt = "${image.alt}"/></li>`;
 });
 console.log(markup);
 gallery.insertAdjacentHTML("afterbegin", markup.join(""));

@@ -5,11 +5,9 @@ form.addEventListener("submit", authorization);
  * @param {Event} event
  */
 
-const formData = {};
-
 function authorization(event) {
   event.preventDefault();
-
+  const formData = {};
   const form = event.currentTarget;
 
   const email = form.elements.email.value.trim();
@@ -17,6 +15,7 @@ function authorization(event) {
 
   if (email === "" || password === "") {
     alert(`All form fields must be filled in`);
+    return;
   }
   formData[form.elements.email.name] = email;
   formData[form.elements.password.name] = password;

@@ -4,8 +4,13 @@ let changeSpan = document.querySelector("#name-output");
 //console.log(changeSpan);
 
 function inputName(event) {
-  const elem = event.target;
-  changeSpan.textContent = elem.value.trim();
+  let name = "";
+  if (event.target.value === "") {
+    name = "Anonymous";
+  } else {
+    name = event.target.value;
+  }
+  changeSpan.textContent = name.trim();
 }
 
 input.addEventListener("input", inputName);
